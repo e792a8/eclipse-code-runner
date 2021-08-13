@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="org.e792a8.coderunner.commands.codeRunnerCategory"
+            name="Code Runner Category">
+      </category>
+      <command
+            categoryId="org.e792a8.coderunner.commands.codeRunnerCategory"
+            id="org.e792a8.coderunner.commands.runFile"
+            name="Run File">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.e792a8.coderunner.handlers.RunFile"
+            commandId="org.e792a8.coderunner.commands.runFile">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.e792a8.coderunner.commands.runFile"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="org.e792a8.coderunner.menus.codeRunnerMenu"
+               label="Run Code"
+               mnemonic="R">
+            <command
+                  commandId="org.e792a8.coderunner.commands.runFile"
+                  id="org.e792a8.coderunner.menus.runFile"
+                  mnemonic="F">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="org.e792a8.coderunner.toolbars.codeRunnerToolbar">
+            <command
+                  commandId="org.e792a8.coderunner.commands.runFile"
+                  icon="icons/sample.png"
+                  id="org.e792a8.coderunner.toolbars.runFile"
+                  tooltip="Run this file">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

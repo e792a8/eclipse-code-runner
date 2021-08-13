@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Code Runner for Eclipse
+Bundle-SymbolicName: org.e792a8.coderunner;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.console,
+ org.eclipse.debug.core,
+ org.eclipse.core.externaltools,
+ org.eclipse.debug.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-16
+Automatic-Module-Name: CodeRunner4Eclipse
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: zhou u74a8
+Bundle-Activator: org.e792a8.coderunner.activator.Activator
